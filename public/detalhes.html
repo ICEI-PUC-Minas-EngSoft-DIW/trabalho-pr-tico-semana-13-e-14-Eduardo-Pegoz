@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Serviço - Estúdio Lua Cris</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-main">LUA CRIS</div>
+                        <div class="logo-subtitle">ESTÚDIO FOTOGRÁFICO</div>
+                    </a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="index.html#colecoes">Coleções</a></li>
+                        <li><a href="index.html#contato">Contato</a></li>
+                        <li><a href="agendamento.html">Agendamentos</a></li>
+                        <li><a href="estatisticas.html">Estatísticas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="service-details">
+            <div class="container">
+                <div id="detalhes-sessao">
+                    <!-- Conteúdo será carregado dinamicamente pelo JavaScript -->
+                    <div class="loading">
+                        <p>Carregando detalhes do serviço...</p>
+                    </div>
+                </div>
+                
+                <div id="fotos-sessao">
+                    <!-- Fotos serão carregadas dinamicamente pelo JavaScript -->
+                </div>
+
+                <div class="back-button">
+                    <a href="index.html#colecoes" class="btn">← Voltar para Coleções</a>
+                    <a href="agendamento.html" class="btn" style="background-color: var(--accent-color);">Agendar Este Serviço</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+<footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Estúdio Lua Cris</h3>
+                    <p>Especialista em ensaios fotográficos para família, infantil, gestantes e eventos especiais.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#colecoes">Coleções</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="agendamento.html">Agendamentos</a></li>
+                        <li><a href="estatisticas.html">Estatísticas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Conheça também</h3>
+                    <p>Visite também nosso outro estúdio: <a href="https://www.instagram.com/studio.violeta_" target="_blank" class="instagram-link">@studio.violeta_</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Estúdio Lua Cris. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Carregar detalhes do serviço
+        document.addEventListener('DOMContentLoaded', async function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const servicoId = urlParams.get('servico');
+            
+            if (!servicoId) {
+                mostrarErroDetalhes();
+                return;
+            }
+            
+            try {
+                const servico = await carregarDetalhesServico(servicoId);
+                if (servico) {
+                    exibirDetalhes(servico);
+                } else {
+                    mostrarErroDetalhes();
+                }
+            } catch (error) {
+                console.error('Erro ao carregar detalhes:', error);
+                mostrarErroDetalhes();
+            }
+        });
+
+        async function carregarDetalhesServico(servicoId) {
+            const servicos = {
+                '1': {
+                    titulo: "Campanhas",
+                    categoria: "Campanhas",
+                    descricao: "A emoção de cada data, eternizada na foto certa.",
+                    imagem_principal: "imgs/campanhas/pascoa1.jpg",
+                    conteudo: `
+                        <h3>Ensaios temáticos para cada época especial</h3>
+                        <p>Capture a magia das datas comemorativas com ensaios fotográficos únicos e personalizados. Crie memórias eternas para:</p>
+                        <ul>
+                            <li><strong>Natal em Família</strong> - A magia da ceia, os presentes e a união</li>
+                            <li><strong>Páscoa Divertida</strong> - Coelhinhos, ovos coloridos e muita alegria</li>
+                            <li><strong>Dia das Mães</strong> - Homenagem à mulher mais especial</li>
+                            <li><strong>Dia dos Pais</strong> - Momentos únicos com herói de cada dia</li>
+                            <li><strong>Outras Datas</strong> - Aniversários, datas especiais e comemorativas</li>
+                        </ul>
+                            <p>Cenários temáticos, figurinos e direção especializada para transformar cada momento em recordação eterna.</p>
+                    `,
+                    duracao: "4-6 horas",
+                    equipamento: "Câmeras Canon EOS R5/R6, lentes profissionais, iluminação de estúdio",
+                    preco: "A partir de R$ 800,00",
+                    inclui: "50 fotos editadas, rights de uso, direção de arte, produção"
+                },
+                '2': {
+                    titulo: "Ensaios Gestantes",
+                    categoria: "Gestantes",
+                    descricao: "Capturando a beleza e magia da maternidade",
+                    imagem_principal: "imgs/gestantes/gravida5.jpeg",
+                    conteudo: `
+                        <h3>Eternize esse momento único</h3>
+                        <p>Nossos ensaios de gestante são realizados com todo cuidado e sensibilidade para registrar essa fase especial. Oferecemos:</p>
+                        <ul>
+                            <li><strong>Ensaios em estúdio</strong> - Controle total de iluminação e ambiente</li>
+                            <li><strong>Ensaios externos</strong> - Natureza e cenários urbanos</li>
+                            <li><strong>Ensaios em casa</strong> - Ambiente familiar e aconchegante</li>
+                            <li><strong>Ensaio com parceiro(a)</strong> - Incluindo pai e/ou irmãos</li>
+                        </ul>
+                        <p>Trabalhamos com poses naturais que destacam a conexão entre mãe e bebê, criando memórias que você guardará para sempre.</p>
+                    `,
+                    duracao: "2-3 horas",
+                    equipamento: "Câmeras profissionais, lentes específicas, iluminação suave",
+                    preco: "A partir de R$ 450,00",
+                    inclui: "20 fotos editadas, 1 ampliação, álbum digital, 2 looks"
+                },
+                '3': {
+                    titulo: "Ensaios Infantis",
+                    categoria: "Infantil",
+                    descricao: "Guardando a melhor fase das brincadeiras mais lindas",
+                    imagem_principal: "imgs/infantil/infantil4.jpg",
+                    conteudo: `
+                        <h3>Capture a pureza da infância</h3>
+                        <p>Especializados em fotografia infantil, criamos ambientes seguros e divertidos onde as crianças podem ser elas mesmas. Oferecemos:</p>
+                        <ul>
+                            <li><strong>Newborn (0-3 meses)</strong> - Sessões suaves e delicadas</li>
+                            <li><strong>Baby (3-12 meses)</strong> - Capturando descobertas e sorrisos</li>
+                            <li><strong>Infantil (1-5 anos)</strong> - Brincadeiras e personalidade</li>
+                            <li><strong>Família</strong> - Incluindo pais e irmãos</li>
+                        </ul>
+                        <p>Temos brinquedos, acessórios e cenários temáticos para tornar a experiência ainda mais especial.</p>
+                    `,
+                    duracao: "1-2 horas",
+                    equipamento: "Câmeras rápidas, lentes apropriadas, brinquedos e acessórios",
+                    preco: "A partir de R$ 300,00",
+                    inclui: "15 fotos editadas, 1 ampliação, álbum digital, 1 look"
+                },
+                '4': {
+                    titulo: "Eventos Especiais",
+                    categoria: "Eventos",
+                    descricao: "Cobertura completa dos seus momentos especiais",
+                    imagem_principal: "imgs/eventos/Casa1.jpg",
+                    conteudo: `
+                        <h3>Documente cada emoção do seu evento</h3>
+                        <p>Oferecemos cobertura completa para diversos tipos de eventos, capturando momentos espontâneos e emocionantes:</p>
+                        <ul>
+                            <li><strong>Casamentos</strong> - Cobertura completa do grande dia</li>
+                            <li><strong>Aniversários</strong> - Festas de 15 anos, adultos e infantis</li>
+                            <li><strong>Formaturas</strong> - Cerimônias e festas</li>
+                            <li><strong>Eventos corporativos</strong> - Palestras, workshops e confraternizações</li>
+                        </ul>
+                        <p>Trabalhamos de forma discreta para não interferir no evento, garantindo fotos naturais e cheias de emoção.</p>
+                    `,
+                    duracao: "Personalizado por evento",
+                    equipamento: "Múltiplas câmeras, lentes variadas, flash profissional",
+                    preco: "Sob consulta",
+                    inclui: "Fotos editadas, álbum físico, pen drive, cobertura completa"
+                }
+            };
+            
+            return servicos[servicoId] || null;
+        }
+
+        function exibirDetalhes(dados) {
+            const container = document.getElementById('detalhes-sessao');
+            const fotosContainer = document.getElementById('fotos-sessao');
+            
+            if (!dados || !container) {
+                mostrarErroDetalhes();
+                return;
+            }
+            
+            // Carregar informações principais
+            container.innerHTML = `
+                <div class="service-detail-header">
+                    <h1>${dados.titulo}</h1>
+                    <p class="service-category">${dados.descricao}</p>
+                </div>
+                <div class="service-detail-content">
+                    <div class="service-detail-image">
+                        <img src="${dados.imagem_principal}" alt="${dados.titulo}" onerror="this.src='imgs/estudio/estudioluacris.jpg'">
+                    </div>
+                    <div class="service-detail-info">
+                        <div class="service-description">
+                            ${dados.conteudo}
+                        </div>
+                        <div class="service-highlights">
+                            <h3>Informações do Serviço</h3>
+                            <ul>
+                                <li><strong>Duração:</strong> ${dados.duracao}</li>
+                                <li><strong>Equipamento:</strong> ${dados.equipamento}</li>
+                                <li><strong>Investimento:</strong> ${dados.preco}</li>
+                                <li><strong>Inclui:</strong> ${dados.inclui}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Carregar fotos adicionais
+            if (fotosContainer) {
+                carregarFotosAdicionais(dados.categoria, fotosContainer);
+            }
+        }
+
+        function carregarFotosAdicionais(categoria, container) {
+            const fotosPorCategoria = {
+                'Campanhas': [
+                    { imagem: 'imgs/campanhas/Natal1.jpg', titulo: 'Natal' },
+                    { imagem: 'imgs/campanhas/dalila.jpeg', titulo: 'Dia das mães/pais' },
+                    { imagem: 'imgs/campanhas/pascoa2.jpg', titulo: 'Páscoa' }
+                ],
+                'Gestantes': [
+                    { imagem: 'imgs/gestantes/gravida8.jpeg', titulo: 'Close-up Maternal' },
+                    { imagem: 'imgs/gestantes/gravida7.jpeg', titulo: 'Silhueta Gestante' },
+                    { imagem: 'imgs/gestantes/gravida4.jpeg', titulo: 'Ensaios Externos' }
+                ],
+                'Infantil': [
+                    { imagem: 'imgs/infantil/infantil 3.jpeg', titulo: 'Brinquedos e Diversão' },
+                    { imagem: 'imgs/infantil/infantil5.jpeg', titulo: 'Sorrisos Espontâneos' },
+                    { imagem: 'imgs/infantil/GS6A5171-2.jpg', titulo: 'Aniversários e mais' }
+                ],
+                'Eventos': [
+                    { imagem: 'imgs/eventos/Casa2.jpg', titulo: 'Casamentos' },
+                    { imagem: 'imgs/eventos/batiza1.jpeg', titulo: 'Cerimônias' },
+                    { imagem: 'imgs/eventos/familia4.jpeg', titulo: 'Eventos Familiares' }
+                ]
+            };
+            
+            const fotos = fotosPorCategoria[categoria] || [];
+            
+            if (fotos.length > 0) {
+                container.innerHTML = `
+                    <div class="service-gallery">
+                        <h2>Galeria do Serviço</h2>
+                        <div class="gallery-grid">
+                            ${fotos.map((foto, index) => `
+                                <div class="gallery-item">
+                                    <img src="${foto.imagem}" alt="${foto.titulo}" onerror="this.src='imgs/estudio/estudioluacris.jpg'">
+                                    <p>${foto.titulo}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = '';
+            }
+        }
+
+        function mostrarErroDetalhes() {
+            const container = document.getElementById('detalhes-sessao');
+            if (container) {
+                container.innerHTML = `
+                    <div class="error-message">
+                        <h2>Serviço não encontrado</h2>
+                        <p>O serviço que você está procurando não existe ou não está disponível no momento.</p>
+                        <a href="index.html" class="btn">Voltar para a Página Inicial</a>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -9,9 +9,9 @@ Sugerimos o uso das seguintes ferramentas acessíveis: [FullCalendar](https://fu
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
+- Nome: Eduardo Lopes Araújo Pêgo
+- Matricula: 902371
+- Proposta de projeto escolhida: Estúdio fotográfico
 - Breve descrição sobre seu projeto:
 
 **Print da tela com a implementação**

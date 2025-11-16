@@ -1,4 +1,164 @@
 {
+  "sessoes": [
+    {
+      "id": 1,
+      "titulo": "Ensaio Gestante Dalila",
+      "categoria": "Gestantes",
+      "descricao": "Ensaio para gestante com temática natural",
+      "conteudo": "Sessão realizada ao ar livre, capturando a beleza e a doçura da maternidade. Utilizamos a luz natural do final da tarde para criar um clima suave e romântico.",
+      "data": "2024-05-15",
+      "local": "Parque Municipal",
+      "fotografo": "Luana Cristina",
+      "cliente": "Dalila",
+      "duracao": "2 horas",
+      "equipamento": "Câmera Canon EOS R6, Lente 50mm f/1.8",
+      "preco": "450.00",
+      "inclui": "20 fotos editadas, 1 ampliação 30x45, álbum digital",
+      "imagem_principal": "imgs/gestantes/dalila.jpg",
+      "destaque": true,
+      "fotos": [
+        {
+          "imagem": "imgs/gestantes/dalila2.jpg",
+          "titulo": "Close-up"
+        },
+        {
+          "imagem": "imgs/gestantes/G56A5488.jpg",
+          "titulo": "Silhueta"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Casamento no Jardim",
+      "categoria": "Eventos",
+      "descricao": "Cerimônia e festa de casamento em jardim botânico",
+      "conteudo": "Cobertura completa do casamento, desde os preparitos até a festa. Capturamos cada momento especial com sensibilidade e técnica.",
+      "data": "2024-06-20",
+      "local": "Jardim Botânico",
+      "fotografo": "Luana Cristina",
+      "cliente": "Ana e Carlos",
+      "duracao": "8 horas",
+      "equipamento": "2 câmeras Canon EOS R6, lentes 24-70mm e 70-200mm, flash externo",
+      "preco": "2500.00",
+      "inclui": "300 fotos editadas, álbum físico de luxo, pen drive personalizado",
+      "imagem_principal": "imgs/eventos/Casamento1.jpg",
+      "destaque": true,
+      "fotos": [
+        {
+          "imagem": "imgs/eventos/Casamento2.jpg",
+          "titulo": "Cerimônia"
+        },
+        {
+          "imagem": "imgs/eventos/Casamento3.jpg",
+          "titulo": "Momentos especiais"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Ensaio Infantil Lucas",
+      "categoria": "Infantil",
+      "descricao": "Ensaio para criança de 2 anos com temática lúdica",
+      "conteudo": "Sessão divertida e descontraída, capturando a energia e a inocência da criança. Utilizamos brinquedos e elementos coloridos para criar um ambiente familiar.",
+      "data": "2024-05-10",
+      "local": "Estúdio Lua Cris",
+      "fotografo": "Luana Cristina",
+      "cliente": "Família Silva",
+      "duracao": "1 hora",
+      "equipamento": "Câmera Canon EOS R6, Lente 35mm f/1.8",
+      "preco": "300.00",
+      "inclui": "15 fotos editadas, 1 ampliação 20x30, álbum digital",
+      "imagem_principal": "imgs/infantil/infantil2.jpg",
+      "destaque": false,
+      "fotos": [
+        {
+          "imagem": "imgs/infantil/infantil3.jpg",
+          "titulo": "Brinquedos"
+        },
+        {
+          "imagem": "imgs/infantil/GS6A5171-2.jpg",
+          "titulo": "Sorriso"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "Campanha de Verão",
+      "categoria": "Campanhas",
+      "descricao": "Campanha publicitária para marca de roupas",
+      "conteudo": "Produção completa para campanha de verão, com modelo profissional, styling e locação à beira-mar. Trabalhamos com luz natural para um resultado fresco e vibrante.",
+      "data": "2024-04-25",
+      "local": "Praia da Costa",
+      "fotografo": "Luana Cristina",
+      "cliente": "Marca ABC",
+      "duracao": "4 horas",
+      "equipamento": "Câmera Canon EOS R5, Lente 85mm f/1.4, refletor",
+      "preco": "1200.00",
+      "inclui": "50 fotos editadas, rights de uso para campanha, book digital",
+      "imagem_principal": "imgs/campanhas/S6A5249.jpg",
+      "destaque": true,
+      "fotos": [
+        {
+          "imagem": "imgs/campanhas/S6A6193.jpg",
+          "titulo": "Looks praia"
+        },
+        {
+          "imagem": "imgs/campanhas/S6A6759.jpg",
+          "titulo": "Detalhes"
+        }
+      ]
+    }
+  ],
+  "agendamentos": [
+    {
+      "id": 1,
+      "cliente": "Maria Silva",
+      "email": "maria@email.com",
+      "telefone": "(31) 99999-9999",
+      "data": "2024-06-15",
+      "horario": "10:00",
+      "tipo_colecao": "Gestantes",
+      "duracao": "2 horas",
+      "valor": 450.00,
+      "quantidade_fotos": 20,
+      "local": "Estúdio Lua Cris",
+      "observacoes": "Gestante de 7 meses, preferência por tons pastel",
+      "status": "confirmado",
+      "data_criacao": "2024-05-01T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "cliente": "João Santos",
+      "email": "joao@email.com",
+      "telefone": "(31) 98888-8888",
+      "data": "2024-06-20",
+      "horario": "14:00",
+      "tipo_colecao": "Campanhas",
+      "duracao": "4 horas",
+      "valor": 800.00,
+      "quantidade_fotos": 50,
+      "local": "Externo",
+      "observacoes": "Campanha para nova linha de produtos",
+      "status": "pendente",
+      "data_criacao": "2024-05-02T14:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "cliente": "Ana Oliveira",
+      "email": "ana@email.com",
+      "telefone": "(31) 97777-7777",
+      "data": "2024-06-25",
+      "horario": "09:00",
+      "tipo_colecao": "Infantil",
+      "duracao": "1 hora",
+      "valor": 300.00,
+      "quantidade_fotos": 15,
+      "local": "Estúdio Lua Cris",
+      "observacoes": "Aniversário de 1 ano, tema floresta",
+      "status": "confirmado",
+      "data_criacao": "2024-05-03T09:15:00.000Z"
+    }
+  ],
   "usuarios": [
     {
       "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",

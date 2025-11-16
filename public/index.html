@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estúdio Lua Cris - Fotografia Profissional</title>
+    <!-- Bootstrap para carrossel -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-main">LUA CRIS</div>
+                        <div class="logo-subtitle">ESTÚDIO FOTOGRÁFICO</div>
+                    </a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#colecoes">Coleções</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="agendamento.html">Agendamentos</a></li>
+                        <li><a href="estatisticas.html">Estatísticas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>CAPTURANDO MOMENTOS ESPECIAIS PARA ETERNIZAR</h1>
+                    <p>Especialista em ensaios fotográficos para família, infantil, gestantes e eventos especiais</p>
+                    <a href="#contato" class="btn">Agende seu ensaio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destaques - CARROSSEL -->
+        <section id="destaques" class="destaques">
+            <div class="container">
+                <h2 class="section-title">Nossas Coleções em Destaque</h2>
+                
+                <!-- Carrossel Bootstrap -->
+                <div id="carouselDestaques" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselDestaques" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselDestaques" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselDestaques" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselDestaques" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <!-- Slide 1 - Campanhas -->
+                        <div class="carousel-item active">
+                            <img src="imgs//campanhas/familia natal.jpeg" class="d-block w-100 carousel-image" alt="Campanhas Publicitárias" onerror="this.src='imgs/estudio/estudioluacris.jpg'">
+                            <div class="carousel-caption">
+                                <h3>Campanhas Publicitárias</h3>
+                                <p>Para cada momento, a foto perfeita.</p>
+                                <a href="detalhes.html?servico=1" class="btn">Ver Coleção</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 - Gestantes -->
+                        <div class="carousel-item">
+                            <img src="imgs/gestantes/gravida2.jpg" class="d-block w-100 carousel-image" alt="Ensaios Gestantes" onerror="this.src='imgs/estudio/estudioluacris.jpg'">
+                            <div class="carousel-caption">
+                                <h3>Ensaios Gestantes</h3>
+                                <p>Capturando a beleza e magia da maternidade</p>
+                                <a href="detalhes.html?servico=2" class="btn">Ver Coleção</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 - Infantil -->
+                        <div class="carousel-item">
+                            <img src="imgs/infantil/infantil 2.jpeg" class="d-block w-100 carousel-image" alt="Ensaios Infantis" onerror="this.src='imgs/estudio/estudioluacris.jpg'">
+                            <div class="carousel-caption">
+                                <h3>Ensaios Infantis</h3>
+                                <p>Um ensaio único, para as lembranças que você não quer esquecer</p>
+                                <a href="detalhes.html?servico=3" class="btn">Ver Coleção</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 4 - Eventos -->
+                        <div class="carousel-item">
+                            <img src="imgs/eventos/batizado.jpg" class="d-block w-100 carousel-image" alt="Eventos Especiais" onerror="this.src='imgs/estudio/estudioluacris.jpg'">
+                            <div class="carousel-caption">
+                                <h3>Eventos Especiais</h3>
+                                <p>Cobertura completa dos seus momentos especiais</p>
+                                <a href="detalhes.html?servico=4" class="btn">Ver Coleção</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaques" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselDestaques" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coleção de Momentos - 2x2 -->
+        <section id="colecoes" class="colecoes">
+            <div class="container">
+                <h2 class="section-title">Coleção de Momentos</h2>
+                <div class="colecoes-grid">
+                    <!-- Campanhas -->
+                    <a href="detalhes.html?servico=1" class="colecao-card">
+                        <div class="colecao-image">
+                            <img src="imgs/campanhas/pascoa1.jpg" alt="Campanhas" onerror="this.src='imgs/estudio/estudioluacris.jpg'">
+                        </div>
+                        <div class="colecao-info">
+                            <h3>Campanhas</h3>
+                            <p>A emoção de cada data, eternizada na foto certa</p>
+                            <span class="btn">Explorar Coleção</span>
+                        </div>
+                    </a>
+
+                    <!-- Gestantes -->
+                    <a href="detalhes.html?servico=2" class="colecao-card">
+                        <div class="colecao-image">
+                            <img src="imgs/gestantes/gravida5.jpeg" alt="Gestantes" onerror="this.src='imgs/estudio/estudioluacris.jpg'">
+                        </div>
+                        <div class="colecao-info">
+                            <h3>Gestantes</h3>
+                            <p>Capturando a beleza e magia da maternidade</p>
+                            <span class="btn">Explorar Coleção</span>
+                        </div>
+                    </a>
+
+                    <!-- Infantil -->
+                    <a href="detalhes.html?servico=3" class="colecao-card">
+                        <div class="colecao-image">
+                            <img src="imgs/infantil/infantil4.jpg" alt="Infantil" onerror="this.src='imgs/estudio/estudioluacris.jpg'">
+                        </div>
+                        <div class="colecao-info">
+                            <h3>Infantil</h3>
+                            <p>Guardando a melhor fase das brincadeiras mais lindas</p>
+                            <span class="btn">Explorar Coleção</span>
+                        </div>
+                    </a>
+
+                    <!-- Eventos -->
+                    <a href="detalhes.html?servico=4" class="colecao-card">
+                        <div class="colecao-image">
+                            <img src="imgs/eventos/casa1.jpg" alt="Eventos" onerror="this.src='imgs/estudio/estudioluacris.jpg'">
+                        </div>
+                        <div class="colecao-info">
+                            <h3>Eventos</h3>
+                            <p>Cobertura completa dos seus momentos especiais</p>
+                            <span class="btn">Explorar Coleção</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section id="sobre" class="about">
+            <div class="container">
+                <h2 class="section-title">Sobre o Estúdio</h2> 
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>O Estúdio <strong>Lua Cris</strong>, criado pela fotógrafa Luana Cristina, tem o objetivo de proporcionar <strong>experiências únicas</strong> através da <strong>fotografia</strong>.</p>
+                        <p>Especializado em ensaios <em>infantis, gestantes, retratos e campanhas exclusivas para famílias</em>, nosso estúdio oferece um <strong>ambiente acolhedor</strong> e <strong>criativo</strong> para capturar os momentos mais <strong>especiais</strong>.</p>
+                        <p>Com mais de <strong>3 mil ensaios realizados</strong> e <strong>14 mil seguidores</strong> nas redes sociais, estamos <strong>prontos</strong> para transformar suas <em>memórias</em> em <strong>arte</strong>.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="imgs/estudio/estudioluacris.jpeg" alt="Estúdio Lua Cris" class="about-img" onerror="this.src='imgs/estudio/estudioluacris.jpg'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informações do Fotógrafo -->
+        <section id="informacoes-aluno" class="about" style="background-color: #f8f9fa;">
+            <div class="container">
+                <h2 class="section-title">Nossa Fotógrafa</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="imgs/estudio/fotografa - luanaCristina.jpeg" alt="Luana Cristina" class="about-img" onerror="this.src='imgs/estudio/estudioluacris.jpg'">
+                    </div>
+                    <div class="about-text">
+                        <h3>Luana Cristina</h3>
+                        <p><strong>Fotógrafa Profissional & Fundadora do Estúdio</strong></p>
+                        <p>Com mais de <strong>3 mil ensaios realizados</strong> e <strong>14 mil seguidores</strong> nas redes sociais, Luana Cristina transforma momentos especiais em memórias eternas através da fotografia.</p>
+                        <p>Especializada em ensaios <strong>infantis, gestantes, retratos e campanhas exclusivas para famílias</strong>, nosso estúdio oferece um ambiente acolhedor e criativo para capturar os momentos mais especiais da sua vida.</p>
+                        <div class="mt-4">
+                            <a href="https://www.instagram.com/lua.cris_/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn" target="_blank">
+                                📷 Instagram
+                            </a>
+                            <a href="#contato" class="btn" style="background-color: #8a5a58;">
+                                📧 Contato
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="contact">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Informações de Contato</h3>
+                        <div class="contact-details">
+                            <p><strong>Endereço:</strong> Rua Joaquim José, 715, sala 105 - Fonte Grande, Contagem</p>
+                            <p><strong>Telefone:</strong> (31) 97303-6914</p>
+                            <p><strong>Email:</strong> contato@estudioluacris.com.br</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/lua.cris_/" aria-label="Instagram" target="_blank">📷</a>
+                            <a href="#" aria-label="Facebook">📘</a>
+                            <a href="https://wa.me/5531973036914" aria-label="WhatsApp" target="_blank">💬</a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Envie uma Mensagem</h3>
+                        <form id="form-contato">
+                            <div class="form-group">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Estúdio Lua Cris</h3>
+                    <p>Especialista em ensaios fotográficos para família, infantil, gestantes e eventos especiais.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#colecoes">Coleções</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="agendamento.html">Agendamentos</a></li>
+                        <li><a href="estatisticas.html">Estatísticas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Conheça também</h3>
+                    <p>Visite também nosso outro estúdio: <a href="https://www.instagram.com/studio.violeta_" target="_blank" class="instagram-link">@studio.violeta_</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Estúdio Lua Cris. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/scripts/app.js"></script>
+</body>
+</html>

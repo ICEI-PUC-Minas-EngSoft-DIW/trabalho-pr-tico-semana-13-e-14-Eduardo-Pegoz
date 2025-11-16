@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatísticas - Estúdio Lua Cris</title>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-main">LUA CRIS</div>
+                        <div class="logo-subtitle">ESTÚDIO FOTOGRÁFICO</div>
+                    </a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="index.html#colecoes">Coleções</a></li>
+                        <li><a href="index.html#contato">Contato</a></li>
+                        <li><a href="agendamento.html">Agendamentos</a></li>
+                        <li><a href="estatisticas.html" class="active">Estatísticas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="stats-section">
+            <div class="container">
+                <h2 class="section-title">Estatísticas do Estúdio</h2>
+                <p class="text-center text-muted mb-4">Visualização dinâmica dos dados de agendamentos</p>
+
+                <!-- Métricas Rápidas -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value" id="total-sessoes">0</div>
+                        <div class="metric-label">Total de Agendamentos</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="sessoes-destaque">0</div>
+                        <div class="metric-label">Agendamentos Confirmados</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="categorias-unicas">0</div>
+                        <div class="metric-label">Tipos de Coleção</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="media-preco">R$ 0</div>
+                        <div class="metric-label">Valor Médio</div>
+                    </div>
+                </div>
+
+                <!-- Filtros -->
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Todos os Tipos</button>
+                    <button class="filter-btn" data-filter="Campanhas">Campanhas</button>
+                    <button class="filter-btn" data-filter="Gestantes">Gestantes</button>
+                    <button class="filter-btn" data-filter="Infantil">Infantil</button>
+                    <button class="filter-btn" data-filter="Eventos">Eventos</button>
+                </div>
+
+                <!-- Gráficos -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Agendamentos por Tipo de Coleção</h3>
+                        <div class="chart-container">
+                            <canvas id="chartCategorias"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Valor Médio por Tipo</h3>
+                        <div class="chart-container">
+                            <canvas id="chartPrecos"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Distribuição Mensal</h3>
+                        <div class="chart-container">
+                            <canvas id="chartMensal"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Status dos Agendamentos</h3>
+                        <div class="chart-container">
+                            <canvas id="chartDestaques"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="back-button">
+                    <a href="index.html" class="btn">Voltar para a página inicial</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+ <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Estúdio Lua Cris</h3>
+                    <p>Especialista em ensaios fotográficos para família, infantil, gestantes e eventos especiais.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#colecoes">Coleções</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="agendamento.html">Agendamentos</a></li>
+                        <li><a href="estatisticas.html">Estatísticas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Conheça também</h3>
+                    <p>Visite também nosso outro estúdio: <a href="https://www.instagram.com/studio.violeta_" target="_blank" class="instagram-link">@studio.violeta_</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Estúdio Lua Cris. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="assets/scripts/chart-config.js"></script>
+</body>
+</html>

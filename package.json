@@ -1,17 +1,31 @@
 {
-
-  "name": "template-diw-20251-semana-12",
-  "version": "1.0.0",
-  "description": "Nesta atividade, você irá completar o projeto anterior permitindo cadastrar e alterar dados da entidade principal do do seu projeto a partir da estrutura criada na etapa anterior com o JSONServer. Para isso, crie uma **página de cadastro (cadastro_[ENTIDADE].html)**, que deve mostrar um formulário para cadastrar a entidade principal do projeto. OBS: Troque [ENTIDADE] pelo nome da sua entidade principal.",
+  "name": "estudio-lua-cris",
+  "version": "2.0.0",
+  "description": "Sistema de gerenciamento para estúdio fotográfico com funcionalidades de agendamento e visualização de dados dinâmica",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "json-server --watch ./db/db.json"
+    "start": "json-server --watch db/db.json --port 3000",
+    "dev": "json-server --watch db/db.json --port 3000 --host localhost",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "json-server": "^0.17.0"
+    "json-server": "^0.17.4"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {},
+  "keywords": [
+    "fotografia",
+    "estudio",
+    "agendamento",
+    "chartjs",
+    "json-server",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Eduardo Lopes Araújo Pêgo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ICEI-PUC-Minas-EngSoft-DIW/trabalho-pr-tico-semana-13-e-14-Eduardo-Pegoz.git"
+  }
 }

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamentos - Estúdio Lua Cris</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-main">LUA CRIS</div>
+                        <div class="logo-subtitle">ESTÚDIO FOTOGRÁFICO</div>
+                    </a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="index.html#colecoes">Coleções</a></li>
+                        <li><a href="index.html#contato">Contato</a></li>
+                        <li><a href="agendamento.html" class="active">Agendamentos</a></li>
+                        <li><a href="estatisticas.html">Estatísticas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="agendamento-section">
+            <div class="container">
+                <h2 class="section-title">Sistema de Agendamentos</h2>
+                <p class="text-center text-muted mb-4">Gerencie todos os agendamentos de ensaios fotográficos</p>
+
+                <div class="agendamento-container">
+                    <!-- Formulário de Agendamento -->
+                    <div class="contact-form">
+                        <h3>Novo Agendamento</h3>
+                        <form id="form-agendamento">
+                            <div class="form-group">
+                                <label for="cliente">Cliente *</label>
+                                <input type="text" id="cliente" name="cliente" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefone">Telefone *</label>
+                                <input type="tel" id="telefone" name="telefone" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="data">Data do Ensaio *</label>
+                                <input type="date" id="data" name="data" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="horario">Horário *</label>
+                                <select id="horario" name="horario" required>
+                                    <option value="">Selecione o horário</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tipo_colecao">Tipo de Coleção *</label>
+                                <select id="tipo_colecao" name="tipo_colecao" required>
+                                    <option value="">Selecione o tipo</option>
+                                    <option value="Campanhas">Campanhas Publicitárias</option>
+                                    <option value="Gestantes">Ensaios Gestantes</option>
+                                    <option value="Infantil">Ensaios Infantis</option>
+                                    <option value="Eventos">Eventos Especiais</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="duracao">Duração Estimada *</label>
+                                <select id="duracao" name="duracao" required>
+                                    <option value="">Selecione a duração</option>
+                                    <option value="1 hora">1 hora</option>
+                                    <option value="2 horas">2 horas</option>
+                                    <option value="3 horas">3 horas</option>
+                                    <option value="4 horas">4 horas</option>
+                                    <option value="6 horas">6 horas (eventos)</option>
+                                    <option value="8 horas">8 horas (casamentos)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="valor">Valor Combinado (R$) *</label>
+                                <input type="number" id="valor" name="valor" step="0.01" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="quantidade_fotos">Quantidade de Fotos *</label>
+                                <input type="number" id="quantidade_fotos" name="quantidade_fotos" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="local">Local do Ensaio *</label>
+                                <select id="local" name="local" required>
+                                    <option value="">Selecione o local</option>
+                                    <option value="Estúdio Lua Cris">Estúdio Lua Cris</option>
+                                    <option value="Externo">Externo</option>
+                                    <option value="Residência">Residência do Cliente</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="observacoes">Observações</label>
+                                <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="status">Status do Agendamento</label>
+                                <select id="status" name="status">
+                                    <option value="confirmado">Confirmado</option>
+                                    <option value="pendente">Pendente</option>
+                                    <option value="cancelado">Cancelado</option>
+                                    <option value="realizado">Realizado</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn" id="btn-agendar">Agendar Ensaio</button>
+                            <button type="button" class="btn" style="background-color: #6c757d;" id="btn-cancelar">Cancelar</button>
+                        </form>
+                    </div>
+
+                    <!-- Lista de Agendamentos -->
+                    <div class="lista-agendamentos">
+                        <h3>Agendamentos do Mês</h3>
+                        <div id="lista-agendamentos">
+                            <!-- Agendamentos serão carregados aqui -->
+                            <div class="loading">
+                                <p>Carregando agendamentos...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="back-button">
+                    <a href="index.html" class="btn">Voltar para a página inicial</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+<footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Estúdio Lua Cris</h3>
+                    <p>Especialista em ensaios fotográficos para família, infantil, gestantes e eventos especiais.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#colecoes">Coleções</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="agendamento.html">Agendamentos</a></li>
+                        <li><a href="estatisticas.html">Estatísticas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Conheça também</h3>
+                   <p>Visite também nosso outro estúdio: <a href="https://www.instagram.com/studio.violeta_" target="_blank" class="instagram-link">@studio.violeta_</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Estúdio Lua Cris. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="assets/scripts/agendamento.js"></script>
+</body>
+</html>
